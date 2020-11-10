@@ -1,6 +1,4 @@
 from tkinter import *
-from tkinter import filedialog as fd
-from tkinter import ttk
 ###Resloution###
 win=Tk()
 win.geometry("400x400+450+200")
@@ -20,7 +18,7 @@ entry.pack(ipadx=100,ipady=5)
 ###functions###
 def downloadtube():
     try :
-        import youtube_dl
+        import youtube_dl#pip install youtube_dl
     except :
         print("install youtube_dl before use")
     ydl_opts = {
@@ -46,4 +44,5 @@ lbc.pack(side="bottom",font=(arial,18),)
 
 win.mainloop()
 
+#youtubeLAND-v0.0.1
 #Devlopped by @chouaibcher7
