@@ -7,6 +7,8 @@ win.geometry("400x400+450+200")
 win.configure(background="#ff3030")
 win.title("YTL v0.0.1")
 win.resizable(0,0)
+icon=PhotoImage(file="youtube.png")
+win.iconphoto(0, icon)
 
 ################
 IMPORTANT='''
