@@ -12,7 +12,7 @@ win.iconphoto(0, icon)
 
 ################
 IMPORTANT='''
-> ONLY AUDIO FORMAT
+> Quality : 480p
 '''
 
 
@@ -29,21 +29,25 @@ lb.place(x=75,y=150)
 entry=Entry(win,width=40)
 entry.place(x=38,y=190)
 ###functions###
-def downloadtube():
-    try :
+
+
+def download():
+    try:
         import youtube_dl
-    except :
+    except:
         print("install youtube_dl")
-    ydl_opts = {
-        'format': 'bestaudio/best',
+    ydl={
+        'format': 'bestvideo[height<=480]+bestaudio/best[height<=480]',
         }
-    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    with youtube_dl.YoutubeDL(ydl) as ydl:
         ydl.download([entry.get()])
+        
 
 
 ###############
-bt=Button(win,text="DOWNLOAD",command=downloadtube,
+bt=Button(win,text="DOWNLOAD",command=download,
            background="white",
+           fg="black",
            activebackground="red",
            activeforeground="white",
            bd=5,
@@ -82,6 +86,10 @@ lbc=Label(win,text="FOLLOW ME ON INSTAGRAM @chouaibcher7",
 lbc.pack(side="bottom")
 
 
+
+
+
+
 win.mainloop()
 
-#coded by @chouaibcher7
+#Coded by @chouaibcher7
