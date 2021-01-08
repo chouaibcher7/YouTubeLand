@@ -84,4 +84,4 @@ lbc.pack(side="bottom")
 
 win.mainloop()
 
-#Devlopped by @chouaibcher7
+#coded by @chouaibcher7
